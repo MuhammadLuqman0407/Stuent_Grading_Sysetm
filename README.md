@@ -29,14 +29,6 @@ A modern, interactive web application for managing and visualizing student grade
 - **Neumorphism**: Soft shadow effects on buttons and interactive elements for depth
 - **Minimalism**: Clean layout with whitespace and intuitive navigation
 
-### UI Components
-
-- Modern navbar with glassmorphic branding
-- Sidebar with neumorphic buttons
-- Interactive data table with hover effects
-- Alert notifications with smooth animations
-- Loading spinner with elegant transitions
-
 ## 🛠 Technologies Used
 
 - **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
