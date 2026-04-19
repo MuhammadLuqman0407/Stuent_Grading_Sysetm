@@ -1,0 +1,23 @@
+[
+    { "id": 1,  "name": "Ali Hassan",        "course_id": 101, "marks": 95 },
+    { "id": 2,  "name": "Sara Khan",         "course_id": 102 },
+    { "id": 3,  "name": "Ahmed Raza",        "course_id": 103, "marks": 45 },
+    { "id": 4,  "name": "Fatima Noor",       "course_id": 101, "marks": 88 },
+    { "id": 5,  "name": "Usman Tariq",       "course_id": 104, "marks": 72 },
+    { "id": 6,  "name": "Ayesha Malik",      "course_id": 102, "marks": 67 },
+    { "id": 7,  "name": "Bilal Ahmed",       "course_id": 103 },
+    { "id": 8,  "name": "Zain Ali",          "course_id": 105, "marks": 91 },
+    { "id": 9,  "name": "Hina Sheikh",       "course_id": 101, "marks": 54 },
+    { "id": 10, "name": "Omar Farooq",       "course_id": 104, "marks": 39 },
+  
+    { "id": 11, "name": "Mariam Khalid",     "course_id": 102, "marks": 83 },
+    { "id": 12, "name": "Hamza Saeed",       "course_id": 103, "marks": 77 },
+    { "id": 13, "name": "Abdullah Qureshi",  "course_id": 105 },
+    { "id": 14, "name": "Sana Tariq",        "course_id": 101, "marks": 92 },
+    { "id": 15, "name": "Talha Javed",       "course_id": 104, "marks": 60 },
+    { "id": 16, "name": "Noor Ul Ain",       "course_id": 102, "marks": 48 },
+    { "id": 17, "name": "Imran Bashir",      "course_id": 103, "marks": 69 },
+    { "id": 18, "name": "Laiba Aslam",       "course_id": 105, "marks": 85 },
+    { "id": 19, "name": "Saad Hussain",      "course_id": 101 },
+    { "id": 20, "name": "Zoya Iqbal",        "course_id": 104, "marks": 73 }
+  ]

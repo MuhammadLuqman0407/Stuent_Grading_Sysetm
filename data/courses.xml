@@ -1,0 +1,39 @@
+<courses>
+
+    <course>
+        <id>101</id>
+        <name>Web Engineering</name>
+        <instructor>Qazi Shuja</instructor>
+    </course>
+
+    <course>
+        <id>102</id>
+        <name>Artificial Intelligence</name>
+        <instructor>Dr. Aamir Nadeem</instructor>
+    </course>
+
+    <course>
+        <id>103</id>
+        <name>Software Quality Engineering</name>
+        <instructor>Dr. Rizwan Bin Faiz</instructor>
+    </course>
+
+    <course>
+        <id>104</id>
+        <name>Human Computer Interaction</name>
+        <instructor>Ibrar Arshad</instructor>
+    </course>
+
+    <course>
+        <id>105</id>
+        <name>Software Engineering</name>
+        <instructor>Mudassar Nadeem</instructor>
+    </course>
+
+    <course>
+        <id>106</id>
+        <name>Data Structures</name>
+        <instructor>Manan Shahid</instructor>
+    </course>
+
+</courses>

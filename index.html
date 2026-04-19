@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Grade Dashboard </title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<!-- ═══ NAVBAR ════════════════════════════════════════════════ -->
+<nav class="navbar">
+  <span class="navbar-brand">
+    <span class="crazy-write">UNIVERSITY</span>
+    <span class="navbar-brand-sub">Grading System</span>
+  </span>
+  <span class="navbar-title crazy-write crazy-write--title">Student Grade Dashboard</span>
+  <span class="navbar-meta">Grading Portal</span>
+</nav>
+
+<!-- ═══ LAYOUT ════════════════════════════════════════════════ -->
+<div class="layout">
+
+  <!-- ─── SIDEBAR ─────────────────────────────────────────── -->
+  <div class="sidebar">
+
+    <!-- Logo block -->
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">🎓</div>
+      <h3 class="crazy-write">UNIVERSITY</h3>
+      <p class="crazy-write crazy-write--soft">Grading System</p>
+    </div>
+
+    <!-- Load Data section -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">Load Data</div>
+
+      <button class="btn btn-sidebar-default" id="loadJson">
+        <span>📄</span> Load JSON
+        <span class="status-dot" id="dotJson"></span>
+      </button>
+
+      <button class="btn btn-sidebar-default" id="loadXml">
+        <span>📋</span> Load XML
+        <span class="status-dot" id="dotXml"></span>
+      </button>
+
+      <button class="btn btn-sidebar-accent" id="mergeData">
+        <span>⚡</span> Merge Data
+      </button>
+
+      <button class="btn btn-sidebar-danger" id="clearData">
+        <span>🗑</span> Clear Data
+      </button>
+    </div>
+
+    <!-- Tools section -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">Tools</div>
+
+      <button class="btn btn-sidebar-default" id="xmlToJson">
+        <span>🔄</span> XML → JSON
+      </button>
+
+      <button class="btn btn-sidebar-default" id="exportCSV">
+        <span>⬇️</span> Export CSV
+      </button>
+    </div>
+
+    <!-- Footer info -->
+    <div class="sidebar-footer">
+      Web Engineering
+    </div>
+
+  </div><!-- /sidebar -->
+
+  <!-- ─── MAIN CONTENT ─────────────────────────────────────── -->
+  <div class="main-content">
+
+    <!-- Alert -->
+    <div id="alertBox"></div>
+
+    <!-- Stat Cards -->
+    <div class="stats-grid" id="stats">
+      <div class="stat-card stat-card-blue">
+        <div class="stat-icon stat-icon-blue">👥</div>
+        <div class="stat-body">
+          <div class="stat-value" id="sv-total">—</div>
+          <div class="stat-label">Total Students</div>
+        </div>
+      </div>
+      <div class="stat-card stat-card-purple">
+        <div class="stat-icon stat-icon-purple">📚</div>
+        <div class="stat-body">
+          <div class="stat-value" id="sv-courses">—</div>
+          <div class="stat-label">Courses (catalog)</div>
+        </div>
+      </div>
+      <div class="stat-card stat-card-green">
+        <div class="stat-icon stat-icon-green">📈</div>
+        <div class="stat-body">
+          <div class="stat-value" id="sv-green">—</div>
+          <div class="stat-label">Marks &gt; 90</div>
+        </div>
+      </div>
+      <div class="stat-card stat-card-red">
+        <div class="stat-icon stat-icon-red">📉</div>
+        <div class="stat-body">
+          <div class="stat-value" id="sv-red">—</div>
+          <div class="stat-label">Marks &lt; 50</div>
+        </div>
+      </div>
+      <div class="stat-card stat-card-yellow">
+        <div class="stat-icon stat-icon-yellow">⚠️</div>
+        <div class="stat-body">
+          <div class="stat-value" id="sv-missing">—</div>
+          <div class="stat-label">Missing Marks</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JSON output (hidden until XML→JSON clicked) -->
+    <pre id="jsonOutput" class="d-none"></pre>
+
+    <!-- Loader -->
+    <div id="loader" class="text-center d-none">
+      <div class="spinner-border"></div>
+    </div>
+
+    <!-- Table Panel -->
+    <div class="table-panel">
+
+      <!-- Panel header -->
+      <div class="table-header">
+        <div class="table-title">
+          <div class="table-title-icon">📊</div>
+          Student Records
+        </div>
+        <div class="search-wrap">
+          <input type="text" id="search" class="form-control"
+                 placeholder="Search name, course, instructor…" />
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div style="overflow-x:auto;">
+        <table class="table table-hover mb-0" id="dataTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th data-key="name">Student Name</th>
+              <th data-key="course">Course</th>
+              <th data-key="instructor">Instructor</th>
+              <th data-key="marks">Marks</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <!-- Panel footer: count + pagination -->
+      <div class="table-footer">
+        <span class="table-count" id="tableCount">Showing 0 records</span>
+        <div id="pagination"></div>
+      </div>
+
+    </div><!-- /table-panel -->
+
+  </div><!-- /main-content -->
+</div><!-- /layout -->
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
